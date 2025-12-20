@@ -1,9 +1,11 @@
-#include "../../Common/d3dApp.h"
+﻿#include "../../Common/d3dApp.h"
 #include "../../Common/MathHelper.h"
 #include "../../Common/UploadBuffer.h"
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <unordered_map>
+#include <WindowsX.h>  // Добавьте эту строку для GET_X_LPARAM/GET_Y_LPARAM
 
 using Microsoft::WRL::ComPtr;
 using namespace DirectX;
@@ -12,9 +14,9 @@ using namespace DirectX::PackedVector;
 struct Vertex
 {
     XMFLOAT3 Pos;
-    XMFLOAT3 Normal;      // �������
-    XMFLOAT2 TexCoord;    // ���������� ����������
-    XMFLOAT4 Color;       // ����
+    XMFLOAT3 Normal;      // нормали
+    XMFLOAT2 TexCoord;    // текстурные координаты
+    XMFLOAT4 Color;       // цвет
 };
 
 struct ObjectConstants
@@ -41,12 +43,19 @@ private:
     virtual void OnMouseUp(WPARAM btnState, int x, int y)override;
     virtual void OnMouseMove(WPARAM btnState, int x, int y)override;
 
+    // Переопределяем обработчик сообщений
+    virtual LRESULT MsgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)override;
+
     void BuildDescriptorHeaps();
     void BuildConstantBuffers();
     void BuildRootSignature();
     void BuildShadersAndInputLayout();
-    void BuildSponzaGeometry();  // �������� � BuildBoxGeometry()
+    void BuildSponzaGeometry();
     void BuildPSO();
+
+    // Методы для управления камерой
+    void UpdateCamera(const GameTimer& gt);
+    void ProcessKeyboardInput(const GameTimer& gt);
 
 private:
 
@@ -68,9 +77,21 @@ private:
     XMFLOAT4X4 mView = MathHelper::Identity4x4();
     XMFLOAT4X4 mProj = MathHelper::Identity4x4();
 
-    float mTheta = 1.5f * XM_PI;
-    float mPhi = XM_PIDIV4;
-    float mRadius = 30.0f;  // ��������� ��� Sponza
+    // Камера для свободного полета
+    XMFLOAT3 mEyePos = { 0.0f, 2.0f, -15.0f };  // Позиция камеры
+    XMFLOAT3 mLookAt = { 0.0f, 0.0f, 0.0f };    // Точка, куда смотрим
+    XMFLOAT3 mUp = { 0.0f, 1.0f, 0.0f };        // Вектор "вверх"
+
+    // Углы камеры (для вращения мышкой)
+    float mPitch = 0.0f;    // Вращение вверх/вниз
+    float mYaw = 0.0f;      // Вращение влево/вправо
+
+    // Скорость движения камеры
+    float mMoveSpeed = 10.0f;
+    float mMouseSensitivity = 0.25f;
+
+    // Состояние клавиш
+    bool mKeys[256] = { false };
 
     POINT mLastMousePos;
 };
@@ -100,6 +121,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 BoxApp::BoxApp(HINSTANCE hInstance)
     : D3DApp(hInstance)
 {
+    // Инициализируем состояние клавиш
+    memset(mKeys, 0, sizeof(mKeys));
 }
 
 BoxApp::~BoxApp()
@@ -117,7 +140,7 @@ bool BoxApp::Initialize()
     BuildConstantBuffers();
     BuildRootSignature();
     BuildShadersAndInputLayout();
-    BuildSponzaGeometry();  // ��������
+    BuildSponzaGeometry();
     BuildPSO();
 
     ThrowIfFailed(mCommandList->Close());
@@ -133,30 +156,162 @@ void BoxApp::OnResize()
 {
     D3DApp::OnResize();
 
-    XMMATRIX P = XMMatrixPerspectiveFovLH(0.25f * MathHelper::Pi, AspectRatio(), 1.0f, 1000.0f);
+    XMMATRIX P = XMMatrixPerspectiveFovLH(0.25f * MathHelper::Pi, AspectRatio(), 0.1f, 1000.0f);
     XMStoreFloat4x4(&mProj, P);
+}
+
+LRESULT BoxApp::MsgProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+    // Обрабатываем сообщения клавиатуры
+    switch (msg)
+    {
+    case WM_KEYDOWN:
+        if (wParam < 256)
+        {
+            mKeys[wParam] = true;
+
+            // Дополнительные клавиши
+            switch (wParam)
+            {
+            case VK_ESCAPE:
+                PostQuitMessage(0);
+                break;
+            case 'R':  // Сброс камеры
+                mEyePos = XMFLOAT3(0.0f, 2.0f, -15.0f);
+                mPitch = 0.0f;
+                mYaw = 0.0f;
+                break;
+            case '1':  // Уменьшить скорость
+                mMoveSpeed = MathHelper::Max(1.0f, mMoveSpeed - 5.0f);
+                break;
+            case '2':  // Увеличить скорость
+                mMoveSpeed += 5.0f;
+                break;
+            }
+        }
+        break;
+
+    case WM_KEYUP:
+        if (wParam < 256)
+        {
+            mKeys[wParam] = false;
+        }
+        break;
+
+    case WM_LBUTTONDOWN:
+    case WM_MBUTTONDOWN:
+    case WM_RBUTTONDOWN:
+        OnMouseDown(wParam, GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam));
+        return 0;
+
+    case WM_LBUTTONUP:
+    case WM_MBUTTONUP:
+    case WM_RBUTTONUP:
+        OnMouseUp(wParam, GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam));
+        return 0;
+
+    case WM_MOUSEMOVE:
+        OnMouseMove(wParam, GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam));
+        return 0;
+    }
+
+    // Вызываем базовую реализацию для остальных сообщений
+    return D3DApp::MsgProc(hwnd, msg, wParam, lParam);
+}
+
+void BoxApp::UpdateCamera(const GameTimer& gt)
+{
+    // Конвертируем углы Эйлера в вектор направления
+    float cosPitch = cosf(mPitch);
+    float sinPitch = sinf(mPitch);
+    float cosYaw = cosf(mYaw);
+    float sinYaw = sinf(mYaw);
+
+    // Вычисляем вектор направления камеры
+    XMFLOAT3 lookDirection;
+    lookDirection.x = cosPitch * sinYaw;
+    lookDirection.y = sinPitch;
+    lookDirection.z = cosPitch * cosYaw;
+
+    // Нормализуем вектор направления
+    XMVECTOR lookDir = XMLoadFloat3(&lookDirection);
+    lookDir = XMVector3Normalize(lookDir);
+
+    // Вычисляем правый и верхний векторы
+    XMVECTOR up = XMLoadFloat3(&mUp);
+    XMVECTOR right = XMVector3Cross(up, lookDir);
+    right = XMVector3Normalize(right);
+
+    // Обновляем lookAt точку
+    XMVECTOR eyePos = XMLoadFloat3(&mEyePos);
+    XMVECTOR lookAt = eyePos + lookDir;
+    XMStoreFloat3(&mLookAt, lookAt);
+
+    // Создаем матрицу вида
+    XMMATRIX view = XMMatrixLookAtLH(eyePos, lookAt, up);
+    XMStoreFloat4x4(&mView, view);
+}
+
+void BoxApp::ProcessKeyboardInput(const GameTimer& gt)
+{
+    float dt = gt.DeltaTime();
+
+    // Вычисляем векторы направления
+    XMVECTOR forward = XMLoadFloat3(&mLookAt) - XMLoadFloat3(&mEyePos);
+    forward = XMVector3Normalize(forward);
+    forward = XMVectorSetY(forward, 0.0f); // Игнорируем вертикальную компоненту для движения вперед/назад
+    forward = XMVector3Normalize(forward);
+
+    XMVECTOR right = XMVector3Cross(XMLoadFloat3(&mUp), forward);
+    right = XMVector3Normalize(right);
+
+    XMVECTOR up = XMLoadFloat3(&mUp);
+
+    // Скорость движения с учетом времени
+    float speed = mMoveSpeed * dt;
+
+    // Обрабатываем движение
+    XMVECTOR moveDir = XMVectorZero();
+
+    if (mKeys['W'] || mKeys[VK_UP])       // Вперед
+        moveDir += forward * speed;
+    if (mKeys['S'] || mKeys[VK_DOWN])     // Назад
+        moveDir -= forward * speed;
+    if (mKeys['A'] || mKeys[VK_LEFT])     // Влево
+        moveDir -= right * speed;
+    if (mKeys['D'] || mKeys[VK_RIGHT])    // Вправо
+        moveDir += right * speed;
+    if (mKeys['E'] || mKeys[' '])         // Вверх (Space или E)
+        moveDir += up * speed;
+    if (mKeys['Q'] || mKeys['C'])         // Вниз (Q или C)
+        moveDir -= up * speed;
+
+    // Применяем движение
+    XMVECTOR eyePos = XMLoadFloat3(&mEyePos);
+    eyePos += moveDir;
+    XMStoreFloat3(&mEyePos, eyePos);
+
+    // Обновляем точку, куда смотрим
+    XMVECTOR lookAt = eyePos + forward;
+    XMStoreFloat3(&mLookAt, lookAt);
 }
 
 void BoxApp::Update(const GameTimer& gt)
 {
-    float x = mRadius * sinf(mPhi) * cosf(mTheta);
-    float z = mRadius * sinf(mPhi) * sinf(mTheta);
-    float y = mRadius * cosf(mPhi);
+    // Обрабатываем ввод с клавиатуры
+    ProcessKeyboardInput(gt);
 
-    XMVECTOR pos = XMVectorSet(x, y, z, 1.0f);
-    XMVECTOR target = XMVectorZero();
-    XMVECTOR up = XMVectorSet(0.0f, 1.0f, 0.0f, 0.0f);
-
-    XMMATRIX view = XMMatrixLookAtLH(pos, target, up);
-    XMStoreFloat4x4(&mView, view);
+    // Обновляем камеру
+    UpdateCamera(gt);
 
     XMMATRIX world = XMLoadFloat4x4(&mWorld);
 
-    // ������������ Sponza (������ ��� �������)
+    // Масштабируем Sponza (обычно она большая)
     world = XMMatrixScaling(0.01f, 0.01f, 0.01f);
 
+    XMMATRIX view = XMLoadFloat4x4(&mView);
     XMMATRIX proj = XMLoadFloat4x4(&mProj);
-    XMMATRIX worldViewProj = world * view * proj;  // ����������
+    XMMATRIX worldViewProj = world * view * proj;
 
     ObjectConstants objConstants;
     XMStoreFloat4x4(&objConstants.WorldViewProj, XMMatrixTranspose(worldViewProj));
@@ -166,7 +321,6 @@ void BoxApp::Update(const GameTimer& gt)
 void BoxApp::Draw(const GameTimer& gt)
 {
     ThrowIfFailed(mDirectCmdListAlloc->Reset());
-
     ThrowIfFailed(mCommandList->Reset(mDirectCmdListAlloc.Get(), mPSO.Get()));
 
     mCommandList->RSSetViewports(1, &mScreenViewport);
@@ -175,11 +329,9 @@ void BoxApp::Draw(const GameTimer& gt)
     mCommandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(CurrentBackBuffer(),
         D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET));
 
-    // Clear the back buffer and depth buffer.
     mCommandList->ClearRenderTargetView(CurrentBackBufferView(), Colors::LightSteelBlue, 0, nullptr);
     mCommandList->ClearDepthStencilView(DepthStencilView(), D3D12_CLEAR_FLAG_DEPTH | D3D12_CLEAR_FLAG_STENCIL, 1.0f, 0, 0, nullptr);
 
-    // Specify the buffers we are going to render to.
     mCommandList->OMSetRenderTargets(1, &CurrentBackBufferView(), true, &DepthStencilView());
 
     ID3D12DescriptorHeap* descriptorHeaps[] = { mCbvHeap.Get() };
@@ -193,7 +345,6 @@ void BoxApp::Draw(const GameTimer& gt)
 
     mCommandList->SetGraphicsRootDescriptorTable(0, mCbvHeap->GetGPUDescriptorHandleForHeapStart());
 
-    // �������� � "box" �� "sponza"
     mCommandList->DrawIndexedInstanced(
         mBoxGeo->DrawArgs["sponza"].IndexCount,
         1, 0, 0, 0);
@@ -229,22 +380,23 @@ void BoxApp::OnMouseMove(WPARAM btnState, int x, int y)
 {
     if ((btnState & MK_LBUTTON) != 0)
     {
-        float dx = XMConvertToRadians(0.25f * static_cast<float>(x - mLastMousePos.x));
-        float dy = XMConvertToRadians(0.25f * static_cast<float>(y - mLastMousePos.y));
+        // Вычисляем смещение мыши
+        float dx = XMConvertToRadians(mMouseSensitivity * static_cast<float>(x - mLastMousePos.x));
+        float dy = XMConvertToRadians(mMouseSensitivity * static_cast<float>(y - mLastMousePos.y));
 
-        mTheta += dx;
-        mPhi += dy;
+        // Обновляем углы камеры
+        mYaw += dx;
+        mPitch += dy;
 
-        mPhi = MathHelper::Clamp(mPhi, 0.1f, MathHelper::Pi - 0.1f);
-    }
-    else if ((btnState & MK_RBUTTON) != 0)
-    {
-        float dx = 0.005f * static_cast<float>(x - mLastMousePos.x);
-        float dy = 0.005f * static_cast<float>(y - mLastMousePos.y);
+        // Ограничиваем угол pitch, чтобы не перевернуть камеру
+        const float maxPitch = XM_PIDIV2 - 0.01f;
+        mPitch = MathHelper::Clamp(mPitch, -maxPitch, maxPitch);
 
-        mRadius += dx - dy;
-
-        mRadius = MathHelper::Clamp(mRadius, 10.0f, 100.0f);  // ��������� ��� Sponza
+        // Нормализуем yaw в диапазоне [0, 2π]
+        if (mYaw > XM_2PI)
+            mYaw -= XM_2PI;
+        else if (mYaw < 0)
+            mYaw += XM_2PI;
     }
 
     mLastMousePos.x = x;
@@ -318,11 +470,11 @@ void BoxApp::BuildShadersAndInputLayout()
 {
     HRESULT hr = S_OK;
 
-    // ����������� �������, ������� ������������ ������� � ��������
+    // Используйте шейдеры, которые поддерживают нормали и текстуры
     mvsByteCode = d3dUtil::CompileShader(L"Shaders\\color.hlsl", nullptr, "VS", "vs_5_0");
     mpsByteCode = d3dUtil::CompileShader(L"Shaders\\color.hlsl", nullptr, "PS", "ps_5_0");
 
-    // ����������� input layout
+    // Обновленный input layout
     mInputLayout =
     {
         { "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D12_INPUT_CLASSIFICATION_PER_VERTEX_DATA, 0 },
@@ -335,24 +487,24 @@ void BoxApp::BuildShadersAndInputLayout()
 void BoxApp::BuildSponzaGeometry()
 {
     std::vector<Vertex> vertices;
-    std::vector<uint32_t> indices; // ���������� uint32_t ��� ������� �������
+    std::vector<uint32_t> indices; // Используем uint32_t для больших моделей
 
-    // ������ ���� � ����� Sponza
-    // �������� ������������ �����:
-    // 1. � ����� � ����������� ������: "sponza.obj"
-    // 2. � ����� Models: "Models/sponza.obj"
-    // 3. ���������� ����: "C:/Models/sponza.obj"
+    // Пример пути к файлу Sponza
+    // Варианты расположения файла:
+    // 1. В папке с исполняемым файлом: "sponza.obj"
+    // 2. В папке Models: "Models/sponza.obj"
+    // 3. Абсолютный путь: "C:/Models/sponza.obj"
 
-    // �������� ���������� ���� ��� ������ �������:
-    std::string filename = "sponza.obj";  // ���� � ��� �� ����� ��� � exe
-    // ���: std::string filename = "Models/Sponza/sponza.obj";
-    // ���: std::string filename = "../Models/sponza.obj";
+    // Выберите подходящий путь для вашего проекта:
+    std::string filename = "sponza.obj";  // Файл в той же папке что и exe
+    // Или: std::string filename = "Models/Sponza/sponza.obj";
+    // Или: std::string filename = "../Models/sponza.obj";
 
-    // �������� OBJ �����
+    // Загрузка OBJ файла
     std::ifstream file(filename);
     if (!file.is_open())
     {
-        // ��������� �������������� ����
+        // Попробуем альтернативные пути
         std::vector<std::string> possiblePaths = {
             "sponza.obj",
             "Models/sponza.obj",
@@ -376,12 +528,12 @@ void BoxApp::BuildSponzaGeometry()
 
         if (!opened)
         {
-            std::wstring message = L"�� ������� ������� ���� sponza.obj. ������ �� �����:\n";
+            std::wstring message = L"Не удалось открыть файл sponza.obj. Искали по путям:\n";
             for (const auto& path : possiblePaths)
             {
                 message += std::wstring(path.begin(), path.end()) + L"\n";
             }
-            MessageBox(nullptr, message.c_str(), L"������", MB_OK);
+            MessageBox(nullptr, message.c_str(), L"Ошибка", MB_OK);
             return;
         }
     }
@@ -390,7 +542,7 @@ void BoxApp::BuildSponzaGeometry()
     std::vector<XMFLOAT3> normals;
     std::vector<XMFLOAT2> texcoords;
 
-    // ��� �������� ���������� �������
+    // Для индексов используем векторы
     std::vector<unsigned int> vertexIndices, uvIndices, normalIndices;
 
     std::string line;
@@ -408,7 +560,7 @@ void BoxApp::BuildSponzaGeometry()
             std::istringstream iss(line.substr(3));
             XMFLOAT2 uv;
             iss >> uv.x >> uv.y;
-            uv.y = 1.0f - uv.y; // ����������� V ���������� ��� DirectX
+            uv.y = 1.0f - uv.y; // Инвертируем V координату для DirectX
             texcoords.push_back(uv);
         }
         else if (line.substr(0, 3) == "vn ")
@@ -426,7 +578,7 @@ void BoxApp::BuildSponzaGeometry()
 
             unsigned int vertexIndex[3], uvIndex[3], normalIndex[3];
 
-            // ������ ������� �����
+            // Парсим вершины грани
             std::string vertices[3] = { vertex1, vertex2, vertex3 };
 
             for (int i = 0; i < 3; i++)
@@ -458,34 +610,34 @@ void BoxApp::BuildSponzaGeometry()
 
     file.close();
 
-    // ������� ���������� � ����������� ������
-    OutputDebugStringA(("���������: " + std::to_string(positions.size()) + " ������, " +
-        std::to_string(vertexIndices.size() / 3) + " �������������\n").c_str());
+    // Выводим информацию о загруженной модели
+    OutputDebugStringA(("Загружено: " + std::to_string(positions.size()) + " вершин, " +
+        std::to_string(vertexIndices.size() / 3) + " треугольников\n").c_str());
 
-    // ������� �������
+    // Создаем вершины
     for (size_t i = 0; i < vertexIndices.size(); i++)
     {
         Vertex vertex;
 
-        // �������
+        // Позиция
         if (vertexIndices[i] < positions.size())
             vertex.Pos = positions[vertexIndices[i]];
         else
             vertex.Pos = XMFLOAT3(0.0f, 0.0f, 0.0f);
 
-        // �������
+        // Нормаль
         if (i < normalIndices.size() && normalIndices[i] < normals.size())
             vertex.Normal = normals[normalIndices[i]];
         else
             vertex.Normal = XMFLOAT3(0.0f, 1.0f, 0.0f);
 
-        // ���������� ����������
+        // Текстурные координаты
         if (i < uvIndices.size() && uvIndices[i] < texcoords.size())
             vertex.TexCoord = texcoords[uvIndices[i]];
         else
             vertex.TexCoord = XMFLOAT2(0.0f, 0.0f);
 
-        // ���� (����� ��������� ��� ��� �����)
+        // Цвет (можно настроить как вам нужно)
         float gray = 0.7f;
         vertex.Color = XMFLOAT4(gray, gray, gray, 1.0f);
 
@@ -513,7 +665,7 @@ void BoxApp::BuildSponzaGeometry()
 
     mBoxGeo->VertexByteStride = sizeof(Vertex);
     mBoxGeo->VertexBufferByteSize = vbByteSize;
-    mBoxGeo->IndexFormat = DXGI_FORMAT_R32_UINT; // �������� �� 32-������
+    mBoxGeo->IndexFormat = DXGI_FORMAT_R32_UINT; // Изменено на 32-битный
     mBoxGeo->IndexBufferByteSize = ibByteSize;
 
     SubmeshGeometry submesh;
