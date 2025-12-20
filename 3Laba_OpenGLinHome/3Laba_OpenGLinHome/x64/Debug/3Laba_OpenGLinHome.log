@@ -1,0 +1,509 @@
+﻿  main.cpp
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\tgaimage.h(56,59): warning C4244: =: преобразование "float" в "unsigned char", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\tgaimage.h(5,8): error C2011: TGA_Header: переопределение типа "struct"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\tgaimage.h(5,8):
+       см. объявление "TGA_Header"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\tgaimage.h(21,8): error C2011: TGAColor: переопределение типа "struct"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\tgaimage.h(21,8):
+       см. объявление "TGAColor"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\tgaimage.h(61,7): error C2011: TGAImage: переопределение типа "class"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\tgaimage.h(61,7):
+       см. объявление "TGAImage"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\model.h(13,14): error C2079: "Model::diffusemap_" использует не имеющую определения структуру class "TGAImage"
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\model.h(14,14): error C2079: "Model::normalmap_" использует не имеющую определения структуру class "TGAImage"
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\model.h(15,14): error C2079: "Model::specularmap_" использует не имеющую определения структуру class "TGAImage"
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,42): error C2953: vec: шаблон класса уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,42):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(19,20): error C3855: "vec": параметр шаблон "T" несовместим с объявлением "DIM"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,18):
+       см. объявление "DIM"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(19,1): error C2976: vec: слишком мало аргументов шаблон
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(19,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,20): error C3855: "vec": параметр шаблон "T" несовместим с объявлением "DIM"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,18):
+       см. объявление "DIM"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,1): error C2976: vec: слишком мало аргументов шаблон
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,25): error C2039: "y": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,32): error C2039: "z": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,39): error C2039: "z": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,46): error C2039: "y": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,52): error C2039: "z": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,59): error C2039: "x": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,66): error C2039: "x": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,73): error C2039: "z": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,79): error C2039: "x": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,86): error C2039: "y": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,93): error C2039: "y": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(85,100): error C2039: "x": не является членом "vec".
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(88,49): error C2995: std::ostream &operator <<(std::ostream &,vec<DIM,T> &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(88,49):
+       см. объявление "operator <<"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(97,41): error C2953: dt: шаблон класса уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(97,41):
+       см. объявление "dt"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(105,19): error C3855: "dt": параметр шаблон "T" несовместим с объявлением "DIM"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(97,17):
+       см. объявление "DIM"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(105,1): error C2976: dt: слишком мало аргументов шаблон
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(105,29):
+       см. объявление "dt"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(113,60): error C2953: mat: шаблон класса уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(113,60):
+       см. объявление "mat"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(206,66): error C2995: std::ostream &operator <<(std::ostream &,mat<DimRows,DimCols,T> &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(206,66):
+       см. объявление "operator <<"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(213,23): error C2371: Vec2f: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(213,23):
+       см. объявление "Vec2f"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(214,23): error C2371: Vec2i: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(214,23):
+       см. объявление "Vec2i"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(215,23): error C2371: Vec3f: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(215,23):
+       см. объявление "Vec3f"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(216,23): error C2371: Vec3i: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(216,23):
+       см. объявление "Vec3i"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(217,23): error C2371: Vec4f: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(217,23):
+       см. объявление "Vec4f"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(218,26): error C2371: Matrix: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(218,26):
+       см. объявление "Matrix"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,42): error C2953: vec: шаблон класса уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,42):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(19,20): error C3855: "vec": параметр шаблон "T" несовместим с объявлением "DIM"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,18):
+       см. объявление "DIM"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(19,1): error C2976: vec: слишком мало аргументов шаблон
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(19,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,20): error C3855: "vec": параметр шаблон "T" несовместим с объявлением "DIM"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,18):
+       см. объявление "DIM"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,1): error C2976: vec: слишком мало аргументов шаблон
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(31,30):
+       см. объявление "vec"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(45,36): error C2995: T operator *(const vec &,const vec &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(45,36):
+       см. объявление "operator *"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(52,45): error C2995: vec operator +(vec,const vec &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(52,45):
+       см. объявление "operator +"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(57,45): error C2995: vec operator -(vec,const vec &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(57,45):
+       см. объявление "operator -"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(62,58): error C2995: vec operator *(vec,const U &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(62,58):
+       см. объявление "operator *"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(67,58): error C2995: vec operator /(vec,const U &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(67,58):
+       см. объявление "operator /"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(72,95): error C2572: embed: переопределение аргумента по умолчанию: параметр 1
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(72,58):
+       см. объявление "embed"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(72,58): error C2995: vec embed(const vec &,T): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(72,58):
+       см. объявление "embed"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(78,58): error C2995: vec proj(const vec &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(78,58):
+       см. объявление "proj"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(84,33): error C2995: vec cross(vec,vec): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(84,33):
+       см. объявление "cross"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(97,41): error C2953: dt: шаблон класса уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(97,41):
+       см. объявление "dt"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(105,19): error C3855: "dt": параметр шаблон "T" несовместим с объявлением "DIM"
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(97,17):
+       см. объявление "DIM"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(105,1): error C2976: dt: слишком мало аргументов шаблон
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(105,29):
+       см. объявление "dt"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(113,60): error C2953: mat: шаблон класса уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(113,60):
+       см. объявление "mat"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(188,70): error C2995: vec operator *(const mat &,const vec &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(188,70):
+       см. объявление "operator *"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(194,69): error C2995: mat operator *(const mat &,const mat &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(194,69):
+       см. объявление "operator *"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(201,78): error C2995: mat operator /(mat,const T &): шаблон функции уже определен
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(201,78):
+       см. объявление "operator /"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(213,23): error C2371: Vec2f: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(213,23):
+       см. объявление "Vec2f"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(214,23): error C2371: Vec2i: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(214,23):
+       см. объявление "Vec2i"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(215,23): error C2371: Vec3f: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(215,23):
+       см. объявление "Vec3f"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(216,23): error C2371: Vec3i: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(216,23):
+       см. объявление "Vec3i"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(217,23): error C2371: Vec4f: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(217,23):
+       см. объявление "Vec4f"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(218,26): error C2371: Matrix: переопределение; различные базовые типы
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(218,26):
+       см. объявление "Matrix"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(15,7): error C2079: "light_dir" использует не имеющую определения структуру struct "vec<3,float>"
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(15,16): error C2440: инициализация: невозможно преобразовать "initializer list" в "int"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(15,16):
+      Инициализатор содержит слишком много элементов
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(16,13): error C2079: "eye" использует не имеющую определения структуру struct "vec<3,float>"
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(16,16): error C2440: инициализация: невозможно преобразовать "initializer list" в "int"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(16,16):
+      Инициализатор содержит слишком много элементов
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(17,10): error C2079: "center" использует не имеющую определения структуру struct "vec<3,float>"
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(17,16): error C2440: инициализация: невозможно преобразовать "initializer list" в "int"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(17,16):
+      Инициализатор содержит слишком много элементов
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(18,14): error C2079: "up" использует не имеющую определения структуру struct "vec<3,float>"
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(18,16): error C2440: инициализация: невозможно преобразовать "initializer list" в "int"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(18,16):
+      Инициализатор содержит слишком много элементов
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(27,5): error C2027: использование неопределенного типа "mat<4,4,float>"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(113,60):
+       см. объявление "mat<4,4,float>"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(29,19): error C2027: использование неопределенного типа "vec<4,float>"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,42):
+       см. объявление "vec<4,float>"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(30,44): error C2027: использование неопределенного типа "vec<2,float>"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,42):
+       см. объявление "vec<2,float>"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(30,20): error C2662: void mat<DimRows,DimCols,T>::set_col(size_t,vec<LEN,T>): невозможно преобразовать указатель "this" из "mat" в "mat<DimRows,DimCols,T> &"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(30,9):
+      Причина: невозможно преобразовать "mat" в "mat<DimRows,DimCols,T>"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(30,9):
+      Для преобразования требуется второй оператор пользовательского преобразования или конструктор
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(135,10):
+       см. объявление "mat<DimRows,DimCols,T>::set_col"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(30,20):
+      при попытке сопоставить список аргументов "(int, Vec2f)"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,15): error C2079: "gl_Vertex" использует не имеющую определения структуру struct "vec<4,float>"
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,36): error C2676: бинарный "*": "Matrix" не определяет этот оператор или преобразование к типу приемлемо к встроенному оператору
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(194,69):
+      может быть "mat operator *(const mat &,const mat &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "mat operator *(const mat &,const mat &)": не удается вывести аргумент шаблон для "R1"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "mat operator *(const mat &,const mat &)": не удается вывести аргумент шаблон для "C1"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "mat operator *(const mat &,const mat &)": не удается вывести аргумент шаблон для "C2"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "mat operator *(const mat &,const mat &)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(188,70):
+      или       "vec operator *(const mat &,const vec &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "vec operator *(const mat &,const vec &)": не удается вывести аргумент шаблон для "DimRows"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "vec operator *(const mat &,const vec &)": не удается вывести аргумент шаблон для "DimCols"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "vec operator *(const mat &,const vec &)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(62,58):
+      или       "vec operator *(vec,const U &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "vec operator *(vec,const U &)": не удается вывести аргумент шаблон для "DIM"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "vec operator *(vec,const U &)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(45,36):
+      или       "T operator *(const vec &,const vec &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "T operator *(const vec &,const vec &)": не удается вывести аргумент шаблон для "DIM"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          "T operator *(const vec &,const vec &)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(194,69):
+      или       "mat<R1,C2,T> operator *(const mat<R1,C1,T> &,const mat<C1,C2,T> &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          Сбой при специализации функции-шаблона "mat<R1,C2,T> operator *(const mat<R1,C1,T> &,const mat<C1,C2,T> &)"
+              C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+              Со следующими аргументами шаблона:
+                  C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+                  "R1=4"
+                  C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+                  "C1=4"
+                  C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+                  "C2=4"
+                  C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+                  "T=float"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(188,70):
+      или       "vec<LEN,T> operator *(const mat<DimRows,DimCols,T> &,const vec<DIM,T> &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          'vec<LEN,T> operator *(const mat<DimRows,DimCols,T> &,const vec<DIM,T> &)': не удалось вывести аргумент шаблон для 'const vec<DIM,T> &' из 'Matrix'
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(62,58):
+      или       "vec<DIM,T> operator *(vec<DIM,T>,const U &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          'vec<DIM,T> operator *(vec<DIM,T>,const U &)': не удалось вывести аргумент шаблон для 'vec<DIM,T>' из 'Matrix'
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(45,36):
+      или       "T operator *(const vec<DIM,T> &,const vec<DIM,T> &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,27):
+          'T operator *(const vec<DIM,T> &,const vec<DIM,T> &)': не удалось вывести аргумент шаблон для 'const vec<DIM,T> &' из 'Matrix'
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,79): error C2027: использование неопределенного типа "vec<3,float>"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,42):
+       см. объявление "vec<3,float>"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,63): error C2672: "embed": не найдена соответствующая перегруженная функция
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(72,58):
+      может быть "vec embed(const vec &,T)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,63):
+          "vec embed(const vec &,T)": не удается вывести аргумент шаблон для "DIM"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,63):
+          "vec embed(const vec &,T)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(72,58):
+      или       "vec<LEN,T> embed(const vec<DIM,T> &,T)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(31,63):
+          недопустимые явные аргументы шаблон для "vec<LEN,T> embed(const vec<DIM,T> &,T)"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(32,69): error C2109: для индекса требуется массив или указатель
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(32,38): error C2672: "proj": не найдена соответствующая перегруженная функция
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(78,58):
+      может быть "vec proj(const vec &)"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(78,58):
+      или       "vec<LEN,T> proj(const vec<DIM,T> &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(32,38):
+          недопустимые явные аргументы шаблон для "vec<LEN,T> proj(const vec<DIM,T> &)"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(32,21): error C2660: mat<DimRows,DimCols,T>::set_col: функция не принимает 1 аргументов
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(135,10):
+       см. объявление "mat<DimRows,DimCols,T>::set_col"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(32,21):
+      при попытке сопоставить список аргументов "(int)"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(36,18): error C2027: использование неопределенного типа "vec<3,float>"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(9,42):
+       см. объявление "vec<3,float>"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,15): error C2079: "sb_p" использует не имеющую определения структуру struct "vec<4,float>"
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,61): error C2676: бинарный "*": "mat" не определяет этот оператор или преобразование к типу приемлемо к встроенному оператору
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(194,69):
+      может быть "mat operator *(const mat &,const mat &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "mat operator *(const mat &,const mat &)": не удается вывести аргумент шаблон для "R1"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "mat operator *(const mat &,const mat &)": не удается вывести аргумент шаблон для "C1"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "mat operator *(const mat &,const mat &)": не удается вывести аргумент шаблон для "C2"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "mat operator *(const mat &,const mat &)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(188,70):
+      или       "vec operator *(const mat &,const vec &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "vec operator *(const mat &,const vec &)": не удается вывести аргумент шаблон для "DimRows"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "vec operator *(const mat &,const vec &)": не удается вывести аргумент шаблон для "DimCols"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "vec operator *(const mat &,const vec &)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(62,58):
+      или       "vec operator *(vec,const U &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "vec operator *(vec,const U &)": не удается вывести аргумент шаблон для "DIM"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "vec operator *(vec,const U &)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(45,36):
+      или       "T operator *(const vec &,const vec &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "T operator *(const vec &,const vec &)": не удается вывести аргумент шаблон для "DIM"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          "T operator *(const vec &,const vec &)": не удается вывести аргумент шаблон для "T"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(194,69):
+      или       "mat<R1,C2,T> operator *(const mat<R1,C1,T> &,const mat<C1,C2,T> &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          'mat<R1,C2,T> operator *(const mat<R1,C1,T> &,const mat<C1,C2,T> &)': не удалось вывести аргумент шаблон для 'const mat<R1,C1,T> &' из 'mat'
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(188,70):
+      или       "vec<LEN,T> operator *(const mat<DimRows,DimCols,T> &,const vec<DIM,T> &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          'vec<LEN,T> operator *(const mat<DimRows,DimCols,T> &,const vec<DIM,T> &)': не удалось вывести аргумент шаблон для 'const mat<DimRows,DimCols,T> &' из 'mat'
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(62,58):
+      или       "vec<DIM,T> operator *(vec<DIM,T>,const U &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          'vec<DIM,T> operator *(vec<DIM,T>,const U &)': не удалось вывести аргумент шаблон для 'vec<DIM,T>' из 'mat'
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(45,36):
+      или       "T operator *(const vec<DIM,T> &,const vec<DIM,T> &)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,49):
+          'T operator *(const vec<DIM,T> &,const vec<DIM,T> &)': не удалось вывести аргумент шаблон для 'const vec<DIM,T> &' из 'mat'
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,40): error C2672: "embed": не найдена соответствующая перегруженная функция
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(72,58):
+      может быть "vec embed(const vec &,T)"
+      C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\geometry.h(72,58):
+      или       "vec<LEN,T> embed(const vec<DIM,T> &,T)"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(37,40):
+          недопустимые явные аргументы шаблон для "vec<LEN,T> embed(const vec<DIM,T> &,T)"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(38,29): error C2109: для индекса требуется массив или указатель
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(39,29): error C2109: для индекса требуется массив или указатель
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\main.cpp(39,29): error C1003: число ошибок превышает 100; остановка компиляции
+  tgaimage.cpp
+C:\Users\HITLERtsuno\source\repos\CG_1term\3Laba_OpenGLinHome\3Laba_OpenGLinHome\tgaimage.h(56,59): warning C4244: =: преобразование "float" в "unsigned char", возможна потеря данных
+  (компиляция исходного файла "tgaimage.cpp")
+  
+  Создание кода...
