@@ -1,0 +1,10 @@
+^C:\USERS\HITLERTSUNO\DOWNLOADS\CG-MAIN (1)\CG-MAIN\LAB_03\BUILD\CMAKEFILES\2FE4AB41EB8F429FB4A8D5E7D3693375\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/HITLERtsuno/Downloads/CG-main (1)/CG-main/Lab_03" "-BC:/Users/HITLERtsuno/Downloads/CG-main (1)/CG-main/Lab_03/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/HITLERtsuno/Downloads/CG-main (1)/CG-main/Lab_03/build/Lab_03.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
