@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62C7CEB8-F538-47DC-B97D-7414549E7505}|CompGraphic\\CompGraphic.vcxproj|C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{62C7CEB8-F538-47DC-B97D-7414549E7505}|CompGraphic\\CompGraphic.vcxproj|solutionrelative:CompGraphic\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62C7CEB8-F538-47DC-B97D-7414549E7505}|CompGraphic\\CompGraphic.vcxproj|C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\tgaimage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{62C7CEB8-F538-47DC-B97D-7414549E7505}|CompGraphic\\CompGraphic.vcxproj|solutionrelative:CompGraphic\\tgaimage.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62C7CEB8-F538-47DC-B97D-7414549E7505}|CompGraphic\\CompGraphic.vcxproj|C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{62C7CEB8-F538-47DC-B97D-7414549E7505}|CompGraphic\\CompGraphic.vcxproj|solutionrelative:CompGraphic\\model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62C7CEB8-F538-47DC-B97D-7414549E7505}|CompGraphic\\CompGraphic.vcxproj|C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\geometry.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{62C7CEB8-F538-47DC-B97D-7414549E7505}|CompGraphic\\CompGraphic.vcxproj|solutionrelative:CompGraphic\\geometry.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "tgaimage.cpp",
+              "DocumentMoniker": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\tgaimage.cpp",
+              "RelativeDocumentMoniker": "CompGraphic\\tgaimage.cpp",
+              "ToolTip": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\tgaimage.cpp",
+              "RelativeToolTip": "CompGraphic\\tgaimage.cpp",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-13T12:12:08.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "geometry.h",
+              "DocumentMoniker": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\geometry.h",
+              "RelativeDocumentMoniker": "CompGraphic\\geometry.h",
+              "ToolTip": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\geometry.h",
+              "RelativeToolTip": "CompGraphic\\geometry.h",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAuwNcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-13T11:19:40.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "model.cpp",
+              "DocumentMoniker": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\model.cpp",
+              "RelativeDocumentMoniker": "CompGraphic\\model.cpp",
+              "ToolTip": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\model.cpp",
+              "RelativeToolTip": "CompGraphic\\model.cpp",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-13T10:55:09.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\main.cpp",
+              "RelativeDocumentMoniker": "CompGraphic\\main.cpp",
+              "ToolTip": "C:\\Users\\HITLERtsuno\\source\\repos\\CG_1term\\Laba3_extra_ice\\CompGraphic\\main.cpp*",
+              "RelativeToolTip": "CompGraphic\\main.cpp*",
+              "ViewState": "AgIAANoBAAAAAAAAAAAuwAgCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-12T22:59:10.046Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

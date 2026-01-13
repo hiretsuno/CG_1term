@@ -1,0 +1,28 @@
+﻿  main.cpp
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\main.cpp(100,16): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\main.cpp(101,16): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,65): warning C4244: аргумент: преобразование "float" в "t", возможна потеря данных
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,65): warning C4244:         with
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,65): warning C4244:         [
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,65): warning C4244:             t=int
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,65): warning C4244:         ]
+  (компиляция исходного файла "main.cpp")
+      C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,65):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\main.cpp(73,6):
+          выполняется компиляция ссылки на экземпляр класс шаблон функции "Vec2<int>"
+          C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,13):
+          во время компиляции функции-члена класс шаблон "Vec2<int> Vec2<int>::operator *(float) const"
+              C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\main.cpp(106,25):
+              см. первую ссылку на Vec2<int>::operator * "triangle"
+  
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,58): warning C4244: аргумент: преобразование "float" в "t", возможна потеря данных
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,58): warning C4244:         with
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,58): warning C4244:         [
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,58): warning C4244:             t=int
+C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\CompGraphic\geometry.h(28,58): warning C4244:         ]
+  (компиляция исходного файла "main.cpp")
+  
+  tgaimage.cpp
+  Создание кода...
+  CompGraphic.vcxproj -> C:\Users\HITLERtsuno\source\repos\CG_1term\Laba3_extra_background\x64\Debug\CompGraphic.exe
